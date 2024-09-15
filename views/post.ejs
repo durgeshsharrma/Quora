@@ -1,0 +1,25 @@
+<% layout('Boilerplate/boilerplate') -%>
+
+<body>
+    <h1 class="mt-2 color-red">Quora Post</h1>
+    <hr>
+    <% for(dat of data){ %>
+              <div class="single-data-box">
+                <!-- <h2 class="">Id : <%= dat.id %></h2> -->
+                <h2 class="">Username : <%= dat.name %></h2>
+                <h4>Adhar_no : <%= dat.adhar %></h4>
+                <h4>Content : <%= dat.content %></h4>
+               <a href="/users/<%= dat.id %>/edit"> <button class="btn btn-warning">edit</button></a>
+               
+                
+                <a href="/users/<%= dat.id %>"><button class="btn show-btn btn-primary">Show</button></a><br>
+                <form method="post" action="/users/<%= dat.id %>?_method=DELETE"><button class="btn mt-3 btn-danger">Delete</button></form>
+              </div>
+
+               <hr>
+
+        <% } %>
+        <form action="/users/new">
+            <button class="btn mb-5 btn-warning">Create</button>
+        </form>
+</body>

@@ -1,0 +1,19 @@
+.single-data-box
+{
+    background-color: rgb(243, 226, 226);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.color-red{
+    color: red;
+}
+
+.d-btn{
+    margin-left: 10px !important;
+}
+
+.show-btn{
+
+    margin-left: 10px !important;
+}

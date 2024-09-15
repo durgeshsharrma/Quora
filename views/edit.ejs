@@ -1,0 +1,26 @@
+<% layout('Boilerplate/boilerplate') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="mt-3 text-primary">Edit Post</h1>
+            <hr>
+            <form method="post" action="/users/<%= Singledata.id %>?_method=PATCH">
+                <div class="mb-3">
+                    <label for="name"  class="form-label">Name</label>
+                    <input type="text" value="<%= Singledata.name %>" id = "name" placeholder="Enter The Name" class="form-control" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="content" class="form-label">Content</label>
+                    <textarea class="form-control"  id="content" name="content" rows="3" ><%= Singledata.content %></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="adhar">Adhar</label>
+                    <input value="<%= Singledata.adhar %>" class="form-control" type="text" id="adhar" placeholder="Enter the Adhar Number" >
+                  </div>
+                  <button class="btn btn-danger">Submit</button>
+                  
+            </form>
+        </div>
+    </div>
+</div>
